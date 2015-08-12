@@ -16,6 +16,11 @@ phiapp.config(function($stateProvider, $urlRouterProvider) {
       url:'/about',
       templateUrl: 'view1/about.html',
       controller: 'AboutCtrl'
+    })
+    .state('alumni', {
+      url:'/alumni',
+      templateUrl: 'view1/alumni.html',
+      controller: 'AlumniCtrl'
     });
 })
 
@@ -25,5 +30,8 @@ phiapp.controller('HomeCtrl', function($scope) {
 });
 
 phiapp.controller('AboutCtrl', function($scope) {
+  $scope.message = 'Look how good I look!';
+});
+phiapp.controller('AlumniCtrl', function($scope) {
   $scope.message = 'Look how good I look!';
 });
