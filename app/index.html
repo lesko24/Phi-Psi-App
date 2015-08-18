@@ -6,7 +6,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>My AngularJS App</title>
+  <title>Swarthmore Phi Psi</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/normalize.css">
@@ -17,6 +17,7 @@
 	<!-- load bootstrap and fontawesome via CDN -->
 	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" />
 	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.0/css/font-awesome.css" />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 	<style>
   	.navbar { border-radius:0; }
 	</style>
@@ -25,16 +26,29 @@
 	<!-- apply our angular app to our site -->
 	<body ng-app="myApp.view1">
 
-	<!-- NAVIGATION -->
-	<nav class="navbar navbar-inverse" role="navigation">
-		<div class="navbar-header">
-			<a class="navbar-brand" ui-sref="home">PHI PSI Swarthmore</a>
-		</div>
-		<ul class="nav navbar-nav">
-			<li><a ui-sref="home">Home</a></li>
-			<li><a ui-sref="about">About</a></li>
-		</ul>
-	</nav>
+	<nav role="navigation" class="navbar navbar-default">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+        <button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+        <a href="#" class="navbar-brand">Phi Psi Swarthmore</a>
+    </div>
+    <!-- Collection of nav links and other content for toggling -->
+    <div id="navbarCollapse" class="collapse navbar-collapse">
+        <ul class="nav navbar-nav">
+            <li><a ui-sref="home">Home</a></li>
+            <li><a ui-sref="about">About</a></li>
+            <li><a ui-sref="alumni">Alumni</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+            <li><a ui-sref="#">Login</a></li>
+        </ul>
+    </div>
+</nav>
 	
 	<div ui-view></div>
 
@@ -43,6 +57,8 @@
   <!-- In production use:
   <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
   -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
   <script src="bower_components/angular/angular.js"></script>
   <script src="bower_components/angular-route/angular-route.js"></script>
   <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
