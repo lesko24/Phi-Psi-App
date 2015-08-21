@@ -1,6 +1,9 @@
 'use strict';
 
 var phiapp = angular.module('myApp.view1', ['ui.router','firebase'])
+phiapp.run(function($rootScope){
+  $rootScope.loggedIn = false;
+});
 
 phiapp.config(function($stateProvider, $urlRouterProvider) {
   $urlRouterProvider.otherwise('/home');
@@ -60,8 +63,11 @@ phiapp.controller('LoginCtrl',['$scope','$rootScope','$firebaseAuth','$location'
 		}, function(error, authData) {
 			if (error) {
 				console.log('Authentication faulure');
+                                $rootScope.loggedIn = false;
 			} else {
 				console.log('Authentication Successfull');
+                                $rootScope.loggedIn = true;
+                                $rootScope.uid = authData.uid;
 				$location.path('/home');
 			}
 		});

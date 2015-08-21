@@ -48,7 +48,9 @@
             <li><a ui-sref="alumni">Alumni</a></li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
-            <li><a ui-sref="login">Login</a></li>
+            <li><a ng-show=$rootScope.loggedIn = false ui-sref="login">Login</a></li>
+            <li><a ng-show=$rootScope.loggedIn = true ui-sref="logout">Logout</a></li>
+
         </ul>
     </div>
 </nav>
