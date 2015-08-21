@@ -60,3 +60,13 @@ h1 {
 .featurette-divider {
   margin: 80px 0; /* Space out the Bootstrap <hr> more */
 }
+
+
+.mainCarousel {
+		max-width: 1200px;
+		margin : 0 auto;
+}
+
+.carouselPicture{
+		height:315px;
+}
