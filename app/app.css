@@ -70,3 +70,9 @@ h1 {
 .carouselPicture{
 		height:315px;
 }
+
+.img-circle {
+		align: middle;
+		width: 80px;
+		height: 80px;
+}

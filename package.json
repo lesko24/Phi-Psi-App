@@ -34,6 +34,7 @@
     "angular-ui-router": "~0.2.15",
     "sequelize": "~3.5.1",
     "sqlite3": "~3.0.10",
-    "express": "~4.13.3"
+    "express": "~4.13.3",
+    "bootcards": "~1.1.2"
   }
 }
